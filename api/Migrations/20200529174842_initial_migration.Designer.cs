@@ -9,8 +9,8 @@ using NetCoreRestMySql.models;
 namespace NetCoreRestMySql.Migrations
 {
     [DbContext(typeof(WeatherApiDbContext))]
-    [Migration("20200529135011_initial")]
-    partial class initial
+    [Migration("20200529174842_initial_migration")]
+    partial class initial_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

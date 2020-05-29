@@ -13,6 +13,8 @@ Scaffolding for a Web Api Application Connected to a MySql database.
     ```
     docker-compose up -d db 
     ```
+    **The database server might need a minute to start up**
+    
 * If this is the first time you are running the project or if you have made database changes you should run migrations and update your database:
     ```
     cd api
@@ -30,7 +32,7 @@ At this point the database should be up and running with the project schema inst
 
 ## Running the API in Debug Mode
 
-When running in debug mode the database runs as a container and the application runs as a process started by your IDE. The application will connect to the database using the host `localhost`. 
+When running in debug mode the database runs as a container and the application runs as a process started by your IDE or terminal. The application will connect to the database using the host `localhost`. 
 
 When running in debug mode the application starts in `Development` mode. This means that it will use the development configurations found in the file `api\appsettings.Development.json`.
 
