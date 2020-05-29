@@ -28,7 +28,7 @@ At this point the database should be up and running with the project schema inst
 * User: `weather-api-user`
 * Password: `password`
 
-## Running in Debug Mode
+## Running the API in Debug Mode
 
 When running in debug mode the database runs as a container and the application runs as a process started by your IDE. The application will connect to the database using the host `localhost`. 
 
@@ -45,10 +45,29 @@ cd api
 dotnet run
 ```
 
-## Running as a Container
+## Running the API as a Container
 
-[WIP]
+Before starting the API as a container you have to build the Docker image for the API. You can find the details for how the image gets built in the `api/Dockerfile` file.
 
-## Testing with Postman
+When running the API as a container it will connect to the database using the host `db` (name of the database service in the `docker-compose.yml` file).
 
-[WIP]
+When running as a container the application starts in `Production` mode. This means that it will use the production configurations found in the file `api\appsettings.json`.
+
+Run the following commands in the root level of the project folder:
+
+* Build the API image:
+    ```
+    docker-compose build api
+    ```
+* Run the application:
+    ```
+    docker-compose up -d
+    ```
+
+## API Endpoints
+
+The application is served on `http://localhost:5000`. Below are the endpoints:
+
+* `/WeatherForcast`
+    - `GET` : Get all weather datapoints.
+
