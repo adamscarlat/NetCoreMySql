@@ -48,3 +48,7 @@ dotnet run
 ## Running as a Container
 
 [WIP]
+
+## Testing with Postman
+
+[WIP]
